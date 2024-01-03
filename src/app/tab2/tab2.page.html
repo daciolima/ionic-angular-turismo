@@ -1,0 +1,85 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="tertiary">
+    <ion-title>
+      Agenda
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+ <!-- List of Sliding Items -->
+<ion-list>
+  <ion-item-sliding>
+    <ion-item>
+      <ion-thumbnail slot="start">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXVJjng2ZQe8XU9_-QU1vdDiWrImAIQdMUpVsX8bnQaQ&s" />
+      </ion-thumbnail>
+      <ion-label>
+        <ion-text color="primary">
+          <h2>item</h2>
+        </ion-text>
+        <p>Category</p>
+    </ion-label>
+    <ion-note slot="end">PB</ion-note>
+    </ion-item>
+    <ion-item-options side="end">
+      <ion-item-option (click)="chooseOption(43, 'bottom')">
+        <ion-icon slot="icon-only" name="ellipsis-vertical-outline"></ion-icon>
+      </ion-item-option>
+    </ion-item-options>
+  </ion-item-sliding>
+
+  <ion-item-sliding>
+    <ion-item>
+      <ion-thumbnail slot="start">
+        <img src="https://static01.nyt.com/newsgraphics/2020/11/12/fake-people/4b806cf591a8a76adfc88d19e90c8c634345bf3d/fallbacks/mobile-02.jpg" />
+      </ion-thumbnail>
+      <ion-label>
+        <ion-text color="primary">
+          <h2>item</h2>
+        </ion-text>
+        <p>Category</p>
+      </ion-label>
+    <ion-note slot="end">PB</ion-note>
+    </ion-item>
+
+    <ion-item-options>
+      <ion-item-option (click)="sendEmail(43, 'bottom')">
+        <ion-icon slot="icon-only" name="send-outline"></ion-icon>
+      </ion-item-option>
+
+      <ion-item-option (click)="like('bottom')">
+        <ion-icon slot="icon-only" name="information-circle-outline"></ion-icon>
+      </ion-item-option>
+    </ion-item-options> 
+  </ion-item-sliding>
+
+  <ion-item-sliding *ngFor="let agendamento of agendamentos">
+    <ion-item>
+      <ion-thumbnail slot="start">
+        <img src="{{agendamento.picture['thumbnail']}}" />
+      </ion-thumbnail>
+      <ion-label>
+        <ion-text color="primary">
+          <h2>{{agendamento.name['first']}}</h2>
+        </ion-text>
+        <p>{{agendamento.email}}</p>
+      </ion-label>
+    <ion-note slot="end">{{agendamento.location['country']}}</ion-note>
+    </ion-item>
+
+    <ion-item-options>
+      <ion-item-option (click)="sendEmail(43, 'bottom')">
+        <ion-icon slot="icon-only" name="send-outline"></ion-icon>
+      </ion-item-option>
+
+      <ion-item-option (click)="like('bottom')">
+        <ion-icon slot="icon-only" name="information-circle-outline"></ion-icon>
+      </ion-item-option>
+    </ion-item-options> 
+  </ion-item-sliding>
+
+
+</ion-list>
+
+</ion-content>

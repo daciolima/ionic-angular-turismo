@@ -1,0 +1,59 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="medical">
+    <ion-title>
+      Financeiro
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  
+  <ion-card>
+    <!-- <ion-card-header>
+      <h2><ion-card-subtitle></ion-card-subtitle></h2>
+    </ion-card-header> -->
+    <ion-card-content>
+      <img alt="Silhouette of mountains" src="data:image/png;base64,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" />
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    
+    <ion-card-header>
+      <ion-card-title><h2>Relatórios</h2></ion-card-title>
+    </ion-card-header>
+
+    <ion-item routerLink="/relatorios-clinica">
+      <ion-icon name="fitness-outline" slot="start"></ion-icon>
+      <ion-label>Clínica</ion-label>
+    </ion-item>
+    
+    <ion-item href="#">
+      <ion-icon name="medkit-outline" slot="start"></ion-icon>
+      <ion-label>Médico</ion-label>
+    </ion-item>
+    
+    <ion-item href="#">
+      <ion-icon name="briefcase-outline" slot="start"></ion-icon>
+      <ion-label>Convênios</ion-label>
+    </ion-item>
+
+    <!-- <ion-item href="#">
+      <ion-icon name="sunny" slot="start"></ion-icon>
+      <ion-label>Sol e Praia</ion-label>
+    </ion-item> -->
+
+    <!-- <ion-item href="#" class="ion-activated">
+      <ion-thumbnail slot="start">
+        <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/thumbnail.svg" />
+      </ion-thumbnail>
+      <ion-label>Sol e praia</ion-label>
+    </ion-item>   -->
+
+  </ion-card>
+
+  <ion-refresher slot="fixed" (ionRefresh)="handleRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+
+</ion-content>

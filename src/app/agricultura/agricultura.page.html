@@ -1,0 +1,40 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>agricultura</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">agricultura</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <!--The content below is only a placeholder and can be replaced.-->
+
+  <apx-chart 
+    [series]="chartOptions.series"
+    [chart]="chartOptions.chart"
+    [xaxis]="chartOptions.xaxis"
+    [dataLabels]="chartOptions.dataLabels"
+    [grid]="chartOptions.grid"
+    [stroke]="chartOptions.stroke"
+    [title]="chartOptions.title"
+  ></apx-chart>
+
+
+
+  <apx-chart
+  [series]="chartPie"
+  [chart]="chartDetails"
+></apx-chart>
+
+  {{chartPie | json}}
+
+
+
+</ion-content>
